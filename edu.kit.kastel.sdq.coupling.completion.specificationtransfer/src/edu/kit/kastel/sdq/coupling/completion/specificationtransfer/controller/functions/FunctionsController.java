@@ -29,7 +29,6 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -167,7 +166,6 @@ public class FunctionsController {
 
 		List<CompilationUnit> parsedFiles = FunctionsParse.parseFiles(fCite.getFiles());
 
-
 		return parsedFiles;
 	}
 
@@ -237,8 +235,11 @@ public class FunctionsController {
 			Locale locale) {
 
 		List<TreeItem<Pair<File, CompilationUnit>>> dirTreesParsed = new ArrayList<>();
+
 		for (TreeItem<File> dirTree : dirTrees) {
+
 			dirTreesParsed.add(FileParseTreeHelper.convertFileTreeToFileCompileTree(dirTree));
+
 		}
 
 		return dirTreesParsed;

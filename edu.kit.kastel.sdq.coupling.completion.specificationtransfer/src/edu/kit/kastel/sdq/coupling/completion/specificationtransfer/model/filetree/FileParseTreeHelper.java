@@ -29,7 +29,8 @@ public class FileParseTreeHelper {
             Pair<File, CompilationUnit> curFileCompilePair;
 
             //Check if it's a leaf, because it's a file, or the directory doesn't have any Files in it...
-            if (fileTreeItem.getValue().isFile()) {
+            //Only consider .java Files as leaves
+            if (fileTreeItem.getValue().isFile() && fileTreeItem.getValue().getAbsolutePath().toString().endsWith(".java")) {
                 curFileCompilePair = new Pair<>(
                         fileTreeItem.getValue(),
                         FunctionsParse.parseSingleFile(fileTreeItem.getValue())
