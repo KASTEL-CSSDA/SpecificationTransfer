@@ -11,7 +11,7 @@ The Main-method of the Project requires three arguments in exactly this order:
 ## Assumptions: 
 Currently, this is a research prototype and works with assumptions for the merge process:
 - The package structure of both projects are the same
-- The names of the java classes which should be merged are the same
+- The names of the java classes and its contained which should be merged are the same
 
 ## Limitations: 
 The project currently does not support generects, overloaded methods or nested classes. 
